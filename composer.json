@@ -1,20 +1,33 @@
 {
-	"name": "kinglozzer/htmleditorstylinghook",
-	"description": "Allows adding CSS classes to HTMLEditorFields for styling hooks",
-	"type": "silverstripe-module",
-	"homepage": "https://github.com/kinglozzer/htmleditorstyinghook",
-	"keywords": ["silverstripe", "htmleditorfield", "css", "styling"],
-	"authors": [
-		{
-			"name": "Loz Calver",
-			"email": "lozcalver@bigfork.co.uk"
-		}
-	],
-	"license": "BSD-3-Clause",
-	"support": {
-		"issues": "https://github.com/kinglozzer/htmleditorstyinghook/issues"
-	},
-	"require": {
-		"silverstripe/framework": ">=3.0"
-	}
+    "name": "kinglozzer/htmleditorstylinghook",
+    "description": "Allows adding CSS classes to HTMLEditorFields for styling hooks",
+    "type": "silverstripe-vendormodule",
+    "homepage": "https://github.com/kinglozzer/htmleditorstyinghook",
+    "keywords": [
+        "silverstripe",
+        "htmleditorfield",
+        "css",
+        "styling"
+    ],
+    "authors": [
+        {
+            "name": "Loz Calver",
+            "email": "lozcalver@bigfork.co.uk"
+        }
+    ],
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/kinglozzer/htmleditorstyinghook/issues"
+    },
+    "require": {
+        "silverstripe/framework": "^4"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.x-dev"
+        },
+        "expose": [
+            "client/dist"
+        ]
+    }
 }

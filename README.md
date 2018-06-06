@@ -8,25 +8,28 @@ _HomePage.php_
 ```php
 <?php
 
-class HomePage extends Page {
+use SilverStripe\Forms\FieldList;
 
-	public function getCMSFields() {
-		$fields = parent::getCMSFields();
+class HomePage extends Page
+{
+    public function getCMSFields() {
+        $this->beforeUpdateCMSFields(function (FieldList $fields) {
+            if ($content = $fields->dataFieldByName('Content')) {
+                $content->setAttribute('data-mce-body-class', 'HomePage');
+            }
+        });
 
-		$fields->dataFieldByName('Content')->setAttribute('data-mce-body-class', 'HomePage');
-
-		return $fields;
-	}
-
+        return parent::getCMSFields();
+    }
 }
 ```
 
 _editor.css_
 ```css
 .HomePage {
-	background: #000;
-	color: #fff;
+  background: #000;
+  color: #fff;
 }
 ```
 
-Currently only set up for use in the CMS. To use with a different `HtmlEditorConfig` instance, simply copy the approach in _config.php
+Currently only set up for use in the CMS. To use with a different `HtmlEditorConfig` instance, simply copy the approach in `_config.php`
